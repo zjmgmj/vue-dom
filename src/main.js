@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import store from './store'
 import './Content/css/public.css'
+import './Content/css/fonts.css'
 import zepto from './Content/js/n-zepto.js'
 import zepto_touch from './Content/js/touch.js'
 import swiper from './Content/js/swiper.min.js';
