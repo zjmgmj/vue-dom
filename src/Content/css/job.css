@@ -1,0 +1,113 @@
+.job {
+  overflow: hidden;
+}
+.job .flex {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.job .job-title {
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+.job .job-title h2 {
+  font-size: 1rem;
+}
+.job .job-title p {
+  padding-top: 15px;
+  text-align: right;
+}
+.job .job-title p span {
+  display: none;
+}
+.job .job-content {
+  position: relative;
+}
+.job .job-name {
+  cursor: none;
+  width: 100%;
+  border-bottom: 1px #fff solid;
+}
+.job .job-list {
+  width: 100%;
+  min-height: 80px;
+  line-height: 50px;
+  padding-left: 0.6rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  border: 1px #f2f2f2 solid;
+  background: linear-gradient(top, #fafafa, #f0f0f0);
+  background: -webkit-linear-gradient(top, #fafafa, #f0f0f0);
+}
+.job .job-list .fa {
+  padding-left: 10px;
+  width: 14px;
+  height: 15px;
+  transform: rotate(90deg);
+  transition: all 100ms;
+  height: 50px;
+  line-height: 50px;
+}
+.job .job-list .job-list-detail {
+  max-height: 0;
+  opacity: -1;
+  transition: all 400ms;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.job .job-list .job-list-detail div {
+  position: relative;
+  transition: all 100ms;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  opacity: 0.8;
+}
+.job .job-list .job-list-detail div p {
+  line-height: 25px;
+  opacity: 0.8;
+}
+.job .job-list .job-list-detail:before {
+  clear: both;
+  content: "";
+  display: block;
+}
+.job .active .fa {
+  transform: rotate(270deg);
+  transition: all 300ms;
+}
+.job .active .job-list-detail {
+  transition: all 500ms;
+  max-height: 1000px;
+  opacity: 1;
+}
+.job .active .job-list-detail div {
+  opacity: 1;
+  transition: all 500ms;
+}
+.job .job-ob {
+  text-align: left;
+  opacity: 0.7;
+  font-size: 0.7rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+.job .job-ob span {
+  padding-right: 0.8rem;
+}
+.job .button {
+  text-align: center;
+  width: 100px;
+  display: inline-block;
+  line-height: 35px;
+  border-radius: 10px;
+  border: 1px solid #567bcd;
+  border: 0 solid rgba(255, 255, 255, 0);
+  color: #666;
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.16));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.16));
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+/*# sourceMappingURL=job.css.map */

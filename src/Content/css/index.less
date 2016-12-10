@@ -1,0 +1,208 @@
+@padding: 0.15rem;
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.product {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    padding-top: @padding;
+    margin-bottom: 0.02rem;
+    @media screen and (max-width:414px) {
+        img {
+            width: 50%;
+            padding-top: 0.5rem;
+            display: block;
+        }
+    }
+    h3 {
+        line-height: 1.4rem;
+    }
+}
+.flex-wrap-reverse {
+    flex-flow: row wrap-reverse;
+}
+.flex-wrap {
+    flex-flow: row wrap;
+}
+.background-f2f2f2 {
+    background: linear-gradient(top,#fafafa,#f0f0f0);
+    background: -webkit-linear-gradient(top,#fafafa,#f0f0f0);
+}
+.padding-bottom {
+    margin-bottom: @padding;
+    padding-top: 1rem;
+}
+.content-news {
+    background: #f2f2f2;
+    padding: 2rem 0;
+    h1 {
+        padding-left: 5%;
+        box-sizing: border-box;
+        span {
+            color: rgba(47,47,47,.6);
+            font-size: 0.8rem;
+            padding-left: 0.5rem;
+        }
+    }
+    .news {
+        a {
+            li {
+                width: 90%;
+                padding: 1rem 5%;
+                line-height: 1.5rem;
+                border-bottom: 1px rgba(0,0,0,.1) solid;
+                time {
+                    display: block;
+                    color: #8b8b8b;
+                    span {
+                        color: rgba(139,139,139,.6);
+                        padding-left: 1.5rem;
+                    }
+                }
+                p {
+                    color: rgba(47,47,47,.6);
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                    height: 28px;
+                }
+            }
+            &:last-child {
+                li {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.app {
+    background: url("../../images/app.jpg") no-repeat center;
+    height: 257px;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 7% 0 0 5%;
+    @media (max-width: 466px) {
+        background-position: 68%;
+    }
+    a {
+        color: #fff;
+    }
+    .app-content {
+        padding: 6% 0 0 5%;
+    }
+    .andrid {
+        background: linear-gradient(left,#1d9abf,#5661c3);
+        background: -webkit-linear-gradient(left,#1d9abf,#5661c3);
+    }
+    .ios,
+    .andrid {
+        width: 9.5rem;
+        padding: 0.2rem 0.4rem;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+    }
+    .ios {
+        border: 0.1rem solid rgba(255,255,255,.7);
+    }
+    .fa {
+        &:before {
+            font-size: 2rem;
+        }
+    }
+    .flex {
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.products {
+    text-align: center;
+    margin-top: 1rem;
+    .flex {
+        flex-flow: row wrap;
+        li {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px 5px;
+            border-bottom: 1px #f0f0f0 solid;
+            &:nth-child(2n) {
+                border-left: 1px #f0f0f0 solid;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.follow {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #d0d0d0;
+    a {
+        border: 2px solid #d0d0d0;
+        border-radius: 100%;
+        height: 2.5rem;
+        width: 2.5rem;
+        line-height: 2.5rem;
+        margin: 1rem 0.5rem;
+    }
+    .flex {
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        .fa {
+            &:before {
+                font-size: 1.4rem;
+                color: #d0d0d0;
+                text-align: center;
+                line-height: 2.5rem;
+            }
+        }
+        .youku {
+            background: url("../../images/youku.jpg") no-repeat center;
+            background-size: 1.8rem;
+        }
+    }
+}
+#airwheel_weixin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    z-index: 9999;
+    display: none;
+    .weixin {
+        width: 15rem;
+        height: 18.5rem;
+        background: #fff;
+        border-radius: 0.5rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -7.5rem;
+        margin-top: -9rem;
+        overflow: hidden;
+        text-align: center;
+        color: rgba(0,0,0,.6);
+        transform: scale(1,0);
+        transition: all 300ms;
+        &.prompt_show {
+            animation: prompt_show 300ms ease-in-out;
+            animation-fill-mode: forwards;
+            transform-origin: top;
+        }
+    }
+}
+@keyframes prompt_show {
+    0% {
+        transform: scale(1,0);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}

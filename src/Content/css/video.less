@@ -1,0 +1,59 @@
+.video {
+    padding: 1rem 0;
+    .flex {
+        text-align: center;
+        flex-flow: row wrap;
+        justify-content: center;
+        @media (min-width: 600px) {
+            justify-content: flex-start;
+        }
+        li {
+            margin: 0.5rem 0;
+            p{
+                padding: .5rem 0;
+            }
+            @media (min-width: 600px) {
+                width: 50%;
+                box-sizing: border-box;
+                &:nth-child(n) {
+                    padding: 0.5rem;
+                }
+                &:nth-child(2n-1) {
+                    padding-left: 0;
+                }
+                &:nth-child(2n) {
+                    padding-right: 0;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 380px) {
+                img {
+                    width: 100%;
+                }
+            }
+            span{
+                position: absolute;
+                width:70px;
+                height: 40px;
+                box-sizing: border-box;
+                left: 50%;
+                top: 50%;
+                color: #fff;
+                font-size: 1.6rem;
+                border-radius: .5rem;
+                line-height: 30px;
+                margin-left: -35px;
+                margin-top: -30px;
+                border: 2px solid #fff;
+                .fa{
+                    
+                }
+            }
+            a {
+                display: block;
+            }
+        }
+    }
+}
